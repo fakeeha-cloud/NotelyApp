@@ -11,3 +11,30 @@ fields:username,email,password
         "password":"password",
         "phone":"phone"
     }
+
+
+schema:Task
+fields:title,description,status,created_date,owner,category,priority,is_active
+
+=====API for adding task
+    url:http://127.0.0.1:8000/api/tasks/
+    method:post
+        body:{
+        "title":"title",
+        "description":"description",
+        "status":"status",
+        "category":"category"
+        "priority":"priority"
+    }
+    authorization=Basic
+
+=====API for listing task
+
+    url:http://127.0.0.1:8000/api/tasks/
+    method:get
+    authorization=Basic
+
+
+========API for listing categories
+    url:http://127.0.0.1:8000/api/tasks/categories/
+    method=get
